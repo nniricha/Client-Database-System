@@ -24,7 +24,7 @@ void Product_and_Services::ReadFromFile(vector<string>& productVector, vector<st
     ifstream prodAndServIn;
     prodAndServIn.open("ProductsAndServicesFile.txt");
     
-    while(!inputStreamVariable.eof()){
+    while(!prodAndServIn.eof()){
         prodAndServIn >> product;
         prodAndServIn >> serviceDescription;
         
@@ -112,5 +112,5 @@ void Product_and_Services::SaveToFile(string product, string serviceDescription,
         
         prodAndServOut << serviceDescription;
     }
-    prodAndServIn.close();
+    prodAndServOut.close();
 }
