@@ -17,9 +17,16 @@ using namespace std;
 class Product_and_Services {
     public:
     void AddPrice(vector<int>& priceVector);
+    void ReadFromFile();
+    void ListServices();
+    string AddNewService();
+    void UpdateService();
+    void PrintServicesReport();
+    void SaveToFile();
         
     private:
     vector<int> priceVector;
+    vector<string> vectorServices;
         
 };
 
