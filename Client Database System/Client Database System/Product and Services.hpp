@@ -17,16 +17,19 @@ using namespace std;
 class Product_and_Services {
     public:
     void AddPrice(vector<int>& priceVector);
-    void ReadFromFile();
+    void ReadFromFile(vector<string>& productVector, vector<string>& serviceDescriptionVector);
     void ListServices();
-    string AddNewService();
-    void UpdateService();
-    void PrintServicesReport();
-    void SaveToFile();
+    void AddNewService(string product, string serviceDescription, vector<string>& productVector, vector<string>& descriptionVector);
+    void UpdateService(string product, string serviceDescription, vector<string>& productVector, vector<string>& descriptionVector);
+    void PrintServicesReport(vector<string>& productVector, vector<string>& descriptionVector);
+    void SaveToFile(vector<string>& productVector, vector<string>& descriptionVector);
         
     private:
     vector<int> priceVector;
-    vector<string> vectorServices;
+    string serviceDescription;
+    string product;
+    string productVector;
+    string descriptionVector;
         
 };
 
